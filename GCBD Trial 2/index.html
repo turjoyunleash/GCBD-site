@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Global Connect Bangladesh (GCBD)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Global Connect Bangladesh (GCBD) – Your Dream. Our Commitment. High-end overseas education consulting for Bangladeshi students."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+      .heading-font {
+        font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+      .gcbd-gradient {
+        background-image: linear-gradient(
+          135deg,
+          #580b63 0%,
+          #b8028f 40%,
+          #f3834a 100%
+        );
+      }
+      .gcbd-gradient-text {
+        background-image: linear-gradient(
+          135deg,
+          #580b63,
+          #b8028f,
+          #f3834a
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .header-floating {
+        backdrop-filter: blur(20px);
+      }
+      .stat-digit::after {
+        content: "+";
+      }
+      .stat-percent::after {
+        content: "%";
+      }
+      .watermark-bg {
+        background-image: url("./assets/icon.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 120px;
+        opacity: 0.98;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gcbdPurple: "#580B63",
+              gcbdMagenta: "#B8028F",
+              gcbdOrange: "#F3834A",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <!-- HEADER -->
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-40 flex justify-center px-4 pt-4 transition-all duration-300"
+    >
+      <div
+        class="header-floating w-full max-w-6xl rounded-full border border-white/20 bg-white/5 px-4 py-2.5 sm:px-6 flex items-center justify-between shadow-[0_20px_60px_rgba(15,23,42,0.35)]"
+      >
+        <!-- Logo -->
+        <a href="#top" class="flex items-center gap-2 shrink-0">
+          <img
+            src="./assets/logo.png"
+            alt="GCBD Logo"
+            class="h-8 w-auto object-contain"
+          />
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-[13px] font-medium heading-font"
+        >
+          <a
+            href="#destinations"
+            class="nav-link text-slate-100/80 hover:text-white transition-colors"
+            >Destinations</a
+          >
+          <a
+            href="#process"
+            class="nav-link text-slate-100/80 hover:text-white transition-colors"
+            >Process</a
+          >
+          <a
+            href="#faq"
+            class="nav-link text-slate-100/80 hover:text-white transition-colors"
+            >FAQ</a
+          >
+        </nav>
+
+        <!-- Desktop CTA -->
+        <a
+          href="https://calendly.com/gcbd-admissions/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex items-center justify-center rounded-full bg-gcbdPurple px-4 py-2 text-xs font-semibold text-white shadow-md hover:shadow-xl hover:scale-[1.05] active:scale-100 transition-all heading-font"
+        >
+          Book Appointment
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="mobile-toggle"
+          class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white shadow-sm hover:shadow-md hover:scale-[1.05] active:scale-100 transition"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            id="icon-open"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4.5 w-4.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg
+            id="icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            class="hidden h-4.5 w-4.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.7"
+          >
+            <path stroke-linecap="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div
+        id="mobile-menu"
+        class="absolute left-1/2 top-[4.25rem] hidden w-full max-w-6xl -translate-x-1/2 px-4 md:hidden"
+      >
+        <div
+          class="rounded-3xl border border-white/20 bg-slate-900/95 px-5 py-4 text-sm text-slate-100 shadow-[0_18px_55px_rgba(15,23,42,0.65)]"
+        >
+          <nav class="space-y-2 font-medium heading-font">
+            <a
+              href="#destinations"
+              class="block py-1 text-slate-100/85 hover:text-white"
+              >Destinations</a
+            >
+            <a
+              href="#process"
+              class="block py-1 text-slate-100/85 hover:text-white"
+              >Process</a
+            >
+            <a
+              href="#faq"
+              class="block py-1 text-slate-100/85 hover:text-white"
+              >FAQ</a
+            >
+          </nav>
+          <div class="mt-4 flex items-center justify-between gap-3">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+              Your Dream. Our Commitment.
+            </p>
+            <a
+              href="https://calendly.com/gcbd-admissions/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-full bg-gcbdPurple px-4 py-2 text-[11px] font-semibold text-white shadow-md hover:shadow-lg hover:scale-[1.05] active:scale-100 transition heading-font"
+            >
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="top" class="overflow-hidden">
+      <section
+        id="hero"
+        class="hero-bg relative flex min-h-screen items-center pt-28 pb-16"
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="text-center flex flex-col items-center"
+            data-aos="fade-up"
+          >
+            <p
+              class="heading-font inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.26em] text-slate-100/80 mb-5"
+            >
+              <span
+                class="inline-block h-1.5 w-1.5 rounded-full bg-gcbdOrange"
+              ></span>
+              Global Connect Bangladesh
+            </p>
+            <h1
+              class="heading-font text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight tracking-tight text-white mb-4"
+              data-aos="slide-up"
+            >
+              Your Dream.
+              <span class="gcbd-gradient-text">Our Commitment.</span>
+            </h1>
+            <p
+              class="max-w-2xl text-sm sm:text-base text-slate-100/85 mb-8"
+              data-aos="slide-up"
+              data-aos-delay="80"
+            >
+              Elite Overseas Education Consultancy for Bangladeshi Students.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-center gap-3"
+              data-aos="slide-up"
+              data-aos-delay="140"
+            >
+              <a
+                href="https://calendly.com/gcbd-admissions/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="heading-font inline-flex items-center justify-center rounded-full bg-gcbdMagenta px-6 py-3 text-xs sm:text-sm font-semibold text-white shadow-lg hover:shadow-2xl hover:scale-[1.05] active:scale-100 transition"
+              >
+                Book via Calendly
+              </a>
+              <a
+                id="hero-whatsapp"
+                href="https://wa.me/8801000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="heading-font inline-flex items-center justify-center rounded-full border border-white/60 bg-white/5 px-6 py-3 text-xs sm:text-sm font-semibold text-white hover:bg-white/10 hover:shadow-xl hover:scale-[1.05] active:scale-100 transition gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2a9 9 0 0 0-7.764 13.59L3 22l6.6-1.975A9 9 0 1 0 12 2Zm0 2a7 7 0 0 1 6.012 10.7l-.2.338A7 7 0 0 1 8.96 18.9l-.345-.14-3.214.96.96-3.214-.14-.344A7 7 0 0 1 12 4Zm-3.1 3.5a.8.8 0 0 0-.6.3c-.16.21-.41.61-.41 1.17 0 .55.34 1.08.48 1.29.07.1.85 1.35 2.09 2.33 1.25.98 2.57 1.42 2.94 1.58.36.15.71.14.98.08.3-.06.93-.38 1.07-.75.13-.36.13-.67.09-.73-.05-.07-.16-.11-.35-.2l-.08-.04c-.26-.13-1.52-.75-1.76-.84-.23-.09-.4-.13-.57.13-.18.28-.72.84-.89 1.02-.04.04-.11.06-.18.03-.07-.03-.29-.11-.6-.26a6.1 6.1 0 0 1-1.8-1.42 2.08 2.08 0 0 1-.4-.61c-.04-.09 0-.14.03-.18.05-.05.11-.13.17-.2.06-.08.08-.13.12-.22.04-.09.02-.17-.01-.24-.03-.07-.58-1.39-.8-1.9-.21-.51-.42-.44-.57-.45Z"
+                  />
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <section
+        class="bg-slate-950 border-y border-slate-900/60 py-8 sm:py-10"
+        aria-label="GCBD in numbers"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div
+            class="grid grid-cols-1 gap-6 text-center sm:grid-cols-3"
+            data-aos="fade-up"
+          >
+            <div class="group space-y-1 transition-transform duration-300 hover:scale-110">
+              <p
+                class="heading-font text-3xl sm:text-4xl font-semibold text-white transition-colors duration-300 group-hover:text-gcbdOrange"
+              >
+                <span
+                  id="stat-universities"
+                  class="stat-digit inline-block"
+                  data-target="500"
+                  >0</span
+                >
+              </p>
+              <p
+                class="heading-font text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-slate-100/80"
+              >
+                Partner Universities
+              </p>
+            </div>
+            <div class="group space-y-1 transition-transform duration-300 hover:scale-110">
+              <p
+                class="heading-font text-3xl sm:text-4xl font-semibold text-gcbdOrange transition-colors duration-300 group-hover:text-gcbdOrange"
+              >
+                <span
+                  id="stat-success"
+                  class="stat-digit inline-block"
+                  data-target="1000"
+                  >0</span
+                >
+              </p>
+              <p
+                class="heading-font text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-slate-100/80"
+              >
+                Success Stories
+              </p>
+            </div>
+            <div class="group space-y-1 transition-transform duration-300 hover:scale-110">
+              <p
+                class="heading-font text-3xl sm:text-4xl font-semibold text-white transition-colors duration-300 group-hover:text-gcbdOrange"
+              >
+                <span
+                  id="stat-visa"
+                  class="stat-percent inline-block"
+                  data-target="98"
+                  >0</span
+                >
+              </p>
+              <p
+                class="heading-font text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-slate-100/80"
+              >
+                Visa Success Guidance
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT GCBD -->
+      <section
+        id="about"
+        class="bg-white py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="mb-10 max-w-4xl"
+            data-aos="slide-up"
+          >
+            <p
+              class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdMagenta mb-3"
+            >
+              About GCBD
+            </p>
+            <h2
+              class="heading-font text-2xl sm:text-3xl lg:text-[2.35rem] font-semibold leading-snug text-gcbdPurple"
+            >
+              We curate paths to the world&apos;s top universities.
+            </h2>
+          </div>
+
+          <div
+            class="grid gap-4 sm:grid-cols-3"
+            data-aos="slide-up"
+            data-aos-delay="80"
+          >
+            <article
+              class="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-gcbdPurple/10 text-gcbdPurple"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
+                  />
+                  <path d="M4 21a8 8 0 0 1 16 0" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Precision Profiling
+              </h3>
+              <p class="text-xs text-slate-600">
+                Every recommendation begins with a detailed profile study, not a list of partner universities.
+              </p>
+            </article>
+
+            <article
+              class="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-gcbdOrange/10 text-gcbdOrange"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7.5a2 2 0 0 1-.586 1.414L15.914 19.5a2 2 0 0 1-1.414.586H6a2 2 0 0 1-2-2Z"
+                  />
+                  <path d="M8 9h8" />
+                  <path d="M10.5 6.5 8 9l2.5 2.5" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Strategic Visa Success
+              </h3>
+              <p class="text-xs text-slate-600">
+                Visa files built with evidence, narrative, and financial logic embassies actually respect.
+              </p>
+            </article>
+
+            <article
+              class="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-gcbdMagenta/10 text-gcbdMagenta"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <circle cx="6" cy="6" r="3" />
+                  <circle cx="18" cy="6" r="3" />
+                  <circle cx="12" cy="18" r="3" />
+                  <path d="M8.7 7.7 10.5 10" />
+                  <path d="M15.3 7.7 13.5 10" />
+                  <path d="M12 15v-2" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Global Network
+              </h3>
+              <p class="text-xs text-slate-600">
+                On-ground alumni insight from students already thriving across the US, UK, Canada, Australia, and Cyprus.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ELIGIBILITY MINI-FORM -->
+      <section
+        id="eligibility"
+        class="bg-[#F8F9FA] py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8" data-aos="slide-up">
+            <p
+              class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdMagenta mb-2"
+            >
+              Eligibility mini-form
+            </p>
+            <h2
+              class="heading-font text-2xl sm:text-3xl font-semibold text-slate-900"
+            >
+              Check if you’re a good fit in
+              <span class="gcbd-gradient-text">under a minute.</span>
+            </h2>
+            <p
+              class="mt-3 text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto"
+            >
+              A quick, no-obligation check. Your answers go directly to a GCBD
+              mentor over WhatsApp, so we can respond with a personalised
+              assessment.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-slate-100 bg-white px-5 py-6 sm:px-7 sm:py-7 shadow-[0_22px_60px_rgba(15,23,42,0.10)]"
+            data-aos="slide-up"
+            data-aos-delay="60"
+          >
+            <form
+              id="eligibility-form"
+              class="space-y-5 sm:space-y-6 text-sm"
+            >
+              <div class="grid gap-4 sm:grid-cols-3">
+                <div class="space-y-1.5">
+                  <label
+                    for="el-destination"
+                    class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+                    >Destination</label
+                  >
+                  <select
+                    id="el-destination"
+                    class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 focus:border-gcbdMagenta focus:outline-none focus:ring-2 focus:ring-gcbdMagenta/40"
+                  >
+                    <option value="">Choose a country</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Finland">Finland</option>
+                    <option value="New Zealand">New Zealand</option>
+                  </select>
+                </div>
+                <div class="space-y-1.5">
+                  <label
+                    for="el-qualification"
+                    class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+                    >Last Qualification</label
+                  >
+                  <select
+                    id="el-qualification"
+                    class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 focus:border-gcbdOrange focus:outline-none focus:ring-2 focus:ring-gcbdOrange/40"
+                  >
+                    <option value="">Select level</option>
+                    <option value="HSC">HSC / A-Levels</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Bachelors">Bachelor’s Degree</option>
+                    <option value="Masters">Master’s Degree</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="space-y-1.5">
+                  <label
+                    for="el-english"
+                    class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+                    >English Level</label
+                  >
+                  <select
+                    id="el-english"
+                    class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 focus:border-gcbdPurple focus:outline-none focus:ring-2 focus:ring-gcbdPurple/40"
+                  >
+                    <option value="">Choose one</option>
+                    <option value="IELTS 6+">IELTS (6.0+)</option>
+                    <option value="IELTS <6">IELTS (below 6.0)</option>
+                    <option value="TOEFL/PTE">TOEFL / PTE</option>
+                    <option value="English Medium">
+                      English Medium / MOI
+                    </option>
+                    <option value="No test yet">No formal test yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-[1.4fr,auto] items-center">
+                <div class="space-y-3">
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="space-y-1.5">
+                      <label
+                        for="el-name"
+                        class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+                        >Full Name</label
+                      >
+                      <input
+                        id="el-name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-gcbdMagenta focus:outline-none focus:ring-2 focus:ring-gcbdMagenta/40"
+                      />
+                    </div>
+                    <div class="space-y-1.5">
+                      <label
+                        for="el-phone"
+                        class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+                        >WhatsApp Number</label
+                      >
+                      <input
+                        id="el-phone"
+                        type="tel"
+                        placeholder="+8801XXXXXXXXX"
+                        class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-gcbdOrange focus:outline-none focus:ring-2 focus:ring-gcbdOrange/40"
+                      />
+                    </div>
+                  </div>
+                  <p class="text-[10px] text-slate-500">
+                    By tapping the button, a WhatsApp chat will open with your
+                    answers pre-filled. No fees, no obligation—just expert
+                    guidance.
+                  </p>
+                </div>
+
+                <button
+                  id="whatsapp-cta"
+                  type="button"
+                  class="heading-font inline-flex items-center justify-center rounded-2xl gcbd-gradient px-5 py-3 text-xs sm:text-sm font-semibold text-white shadow-lg hover:shadow-2xl hover:scale-[1.05] active:scale-100 transition whitespace-nowrap"
+                >
+                  Check via WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR PROCESS -->
+      <section
+        id="process"
+        class="bg-gradient-to-r from-gcbdPurple to-gcbdMagenta py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div
+            class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+          >
+            <div data-aos="slide-up">
+              <p
+                class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdOrange mb-2"
+              >
+                Our Process
+              </p>
+              <h2
+                class="heading-font text-2xl sm:text-3xl font-semibold text-white"
+              >
+                A clear, four-step journey to your global campus.
+              </h2>
+            </div>
+            <p
+              class="max-w-xl text-xs sm:text-sm text-slate-100/80"
+              data-aos="slide-up"
+              data-aos-delay="60"
+            >
+              We keep you ahead of deadlines, documentation, and decisions—so
+              every next step feels obvious, not overwhelming.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-x-auto"
+            data-aos="slide-up"
+            data-aos-delay="40"
+          >
+            <div
+              class="flex min-w-full items-stretch gap-4 sm:gap-6 lg:gap-7 pb-3 overflow-visible"
+            >
+              <!-- Step 1 -->
+              <article
+                class="relative min-w-[220px] flex-1 rounded-3xl border border-white/20 bg-white/10 px-5 pt-10 pb-6 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg overflow-visible"
+              >
+                <div
+                  class="absolute top-1 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-gcbdPurple text-[11px] font-semibold text-white shadow-lg heading-font"
+                >
+                  01
+                </div>
+                <div class="mt-2.5 space-y-2">
+                  <div
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdPurple shadow-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    >
+                      <path
+                        d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
+                      />
+                      <path d="M4 21a8 8 0 0 1 16 0" />
+                    </svg>
+                  </div>
+              <h3
+                class="heading-font text-sm font-semibold text-white"
+                  >
+                    1:1 Counselling
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-100/80">
+                    A deep-dive into your academics, finances, and long-term
+                    migration goals to design your roadmap.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 2 -->
+              <article
+                class="relative min-w-[220px] flex-1 rounded-3xl border border-white/20 bg-white/10 px-5 pt-10 pb-6 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg overflow-visible"
+              >
+                <div
+                  class="absolute top-1 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-gcbdMagenta text-[11px] font-semibold text-white shadow-lg heading-font"
+                >
+                  02
+                </div>
+                <div class="mt-2.5 space-y-2">
+                  <div
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdMagenta shadow-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    >
+                      <path
+                        d="M4 5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"
+                      />
+                      <path d="M13 3v5h5" />
+                      <path d="M9 13h6" />
+                    </svg>
+                  </div>
+                  <h3
+                    class="heading-font text-sm font-semibold text-white"
+                  >
+                    Admission Strategy
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-100/80">
+                    Shortlisting, SOPs, and documentation calibrated for
+                    realistic admits and scholarship chances.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 3 -->
+              <article
+                class="relative min-w-[220px] flex-1 rounded-3xl border border-white/20 bg-white/10 px-5 pt-10 pb-6 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg overflow-visible"
+              >
+                <div
+                  class="absolute top-1 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-gcbdOrange text-[11px] font-semibold text-white shadow-lg heading-font"
+                >
+                  03
+                </div>
+                <div class="mt-2.5 space-y-2">
+                  <div
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdOrange shadow-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    >
+                      <path
+                        d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7.5a2 2 0 0 1-.586 1.414L15.914 19.5a2 2 0 0 1-1.414.586H6a2 2 0 0 1-2-2Z"
+                      />
+                      <path d="M8 9h8" />
+                      <path d="M10.5 6.5 8 9l2.5 2.5" />
+                    </svg>
+                  </div>
+                  <h3
+                    class="heading-font text-sm font-semibold text-white"
+                  >
+                    Visa File & Interview
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-100/80">
+                    Financials, documentation, and mock interviews crafted to
+                    align with embassy expectations.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Step 4 -->
+              <article
+                class="relative min-w-[220px] flex-1 rounded-3xl border border-white/20 bg-white/10 px-5 pt-10 pb-6 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg overflow-visible"
+              >
+                <div
+                  class="absolute top-1 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-[11px] font-semibold text-white shadow-lg heading-font"
+                >
+                  04
+                </div>
+                <div class="mt-2.5 space-y-2">
+                  <div
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-slate-900 shadow-md"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    >
+                      <path
+                        d="M3 10.5 12 5l9 5.5M5 12v5.5L12 23l7-5.5V12"
+                      />
+                      <path d="M3 10.5 12 16l9-5.5" />
+                    </svg>
+                  </div>
+                  <h3
+                    class="heading-font text-sm font-semibold text-white"
+                  >
+                    Pre-Departure & Landing
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-100/80">
+                    Briefings, accommodation guidance, and alumni connections
+                    so you don’t land alone.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESTINATIONS -->
+      <section
+        id="destinations"
+        class="bg-white py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+          >
+            <div data-aos="slide-up">
+              <p
+                class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdMagenta mb-2"
+              >
+                Destinations
+              </p>
+              <h2
+                class="heading-font text-2xl sm:text-3xl font-semibold text-slate-900"
+              >
+                High-impact routes to
+                <span class="gcbd-gradient-text">global careers.</span>
+              </h2>
+            </div>
+            <p
+              class="max-w-xl text-xs sm:text-sm text-slate-600"
+              data-aos="slide-up"
+              data-aos-delay="60"
+            >
+              We focus on destinations that blend academic excellence, safety,
+              post-study work opportunities, and strong Bangladeshi
+              communities.
+            </p>
+          </div>
+
+          <div
+            class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            data-aos="zoom-in"
+          >
+            <!-- USA -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/usa.png"
+                  alt="USA campus"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >USA</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Home to Ivy League, Silicon Valley, and cutting-edge
+                  research—ideal for high-ambition profiles.
+                </p>
+              </div>
+            </article>
+
+            <!-- UK -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/uk.png"
+                  alt="UK campus"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >UK</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Globally respected degrees with 1-year master’s options and
+                  clear post-study work pathways.
+                </p>
+              </div>
+            </article>
+
+            <!-- Canada -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/canada.png"
+                  alt="Canada campus"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Canada</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Friendly immigration policies, co-op programs, and strong PR
+                  prospects for skilled graduates.
+                </p>
+              </div>
+            </article>
+
+            <!-- Australia -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/australia.png"
+                  alt="Australia campus"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Australia</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Lifestyle, safety, and globally ranked universities in one
+                  of the world’s most liveable countries.
+                </p>
+              </div>
+            </article>
+
+            <!-- Cyprus -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/cyprus.png"
+                  alt="Cyprus coast"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Cyprus</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  A cost-effective European gateway with comfortable weather
+                  and multicultural campuses.
+                </p>
+              </div>
+            </article>
+
+            <!-- Malaysia -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/malaysia.png"
+                  alt="Malaysia"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Malaysia</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Affordable tuition, English-medium programs, and a thriving
+                  hub for regional and international students.
+                </p>
+              </div>
+            </article>
+
+            <!-- Hungary -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/hungary.png"
+                  alt="Hungary"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Hungary</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  EU member with strong medicine and engineering programs at
+                  competitive fees and central European location.
+                </p>
+              </div>
+            </article>
+
+            <!-- Malta -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/malta.png"
+                  alt="Malta"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Malta</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  English-speaking EU island with quality universities and
+                  sun-soaked, safe student life.
+                </p>
+              </div>
+            </article>
+
+            <!-- Denmark -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/denmark.png"
+                  alt="Denmark"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Denmark</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  World-class design and tech education, high quality of life,
+                  and strong post-study opportunities in the EU.
+                </p>
+              </div>
+            </article>
+
+            <!-- Sweden -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/sweden.png"
+                  alt="Sweden"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Sweden</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Innovation-led universities, English-taught programs, and
+                  a progressive society with strong career pathways.
+                </p>
+              </div>
+            </article>
+
+            <!-- Finland -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/finland.png"
+                  alt="Finland"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >Finland</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Top-ranked education system, tech and sustainability focus,
+                  and a safe, English-friendly study environment.
+                </p>
+              </div>
+            </article>
+
+            <!-- New Zealand -->
+            <article
+              class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/newzealand.png"
+                  alt="New Zealand"
+                  class="h-32 w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"
+                ></div>
+                <span
+                  class="heading-font absolute bottom-2 left-3 inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-slate-900"
+                  >New Zealand</span
+                >
+              </div>
+              <div class="px-3.5 py-3">
+                <p class="text-[11px] text-slate-600">
+                  Stunning landscapes, respected universities, and post-study
+                  work rights in a welcoming, English-speaking country.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section
+        id="why-us"
+        class="bg-white py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8" data-aos="fade-up">
+            <p
+              class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdMagenta mb-2"
+            >
+              Why GCBD
+            </p>
+            <h2
+              class="heading-font text-2xl sm:text-3xl font-semibold text-slate-900"
+            >
+              Minimal files. Maximum thought.
+            </h2>
+          </div>
+          <div
+            class="grid gap-5 sm:grid-cols-3"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <article
+              class="rounded-3xl border border-slate-100 bg-slate-50/80 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdPurple shadow-md"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                  <path d="M4 21a8 8 0 0 1 16 0" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Senior Mentors Only
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Your file is handled by experienced counsellors, not interns or
+                automated templates.
+              </p>
+            </article>
+            <article
+              class="rounded-3xl border border-slate-100 bg-slate-50/80 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdOrange shadow-md"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <path
+                    d="M4 5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"
+                  />
+                  <path d="M13 3v5h5" />
+                  <path d="M9 13h3" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Scholarship Mindset
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                We prioritise options that balance prestige with affordability,
+                uncovering scholarships you can truly win.
+              </p>
+            </article>
+            <article
+              class="rounded-3xl border border-slate-100 bg-slate-50/80 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg"
+            >
+              <div
+                class="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white text-gcbdMagenta shadow-md"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M4.5 9h15" />
+                  <path d="M9 4.5v15" />
+                </svg>
+              </div>
+              <h3 class="heading-font text-sm font-semibold text-slate-900 mb-1">
+                Radical Transparency
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Honest guidance on your chances, timelines, and costs. No false
+                promises, ever.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT SUCCESS -->
+      <section
+        id="testimonials"
+        class="bg-slate-900 py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8 text-center" data-aos="fade-up">
+            <p
+              class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdOrange mb-2"
+            >
+              Student Success
+            </p>
+            <h2
+              class="heading-font text-2xl sm:text-3xl font-semibold text-white"
+            >
+              Quiet confidence. Visible results.
+            </h2>
+          </div>
+          <div
+            class="grid gap-4 md:grid-cols-3"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <article
+              class="rounded-3xl border border-slate-700 bg-slate-800/50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl"
+            >
+              <div class="mb-2 flex items-center justify-between">
+                <div>
+                  <p class="heading-font text-sm font-semibold text-slate-50">
+                    Afnan · USA
+                  </p>
+                  <p class="text-[11px] text-slate-400">
+                    Computer Science · Full scholarship shortlist
+                  </p>
+                </div>
+                <div class="text-gcbdOrange text-xs">★★★★★</div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200">
+                “GCBD turned my scattered plans into a focused path to the U.S.
+                I always knew the next step.”
+              </p>
+            </article>
+            <article
+              class="rounded-3xl border border-slate-700 bg-slate-800/50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl"
+            >
+              <div class="mb-2 flex items-center justify-between">
+                <div>
+                  <p class="heading-font text-sm font-semibold text-slate-50">
+                    Mahira · UK
+                  </p>
+                  <p class="text-[11px] text-slate-400">
+                    MSc Finance · Russell Group admit
+                  </p>
+                </div>
+                <div class="text-gcbdOrange text-xs">★★★★★</div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200">
+                “Their edits on my SOP completely changed how universities saw
+                my experience. It finally sounded like me.”
+              </p>
+            </article>
+            <article
+              class="rounded-3xl border border-slate-700 bg-slate-800/50 px-4 py-5 shadow-sm transition hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl"
+            >
+              <div class="mb-2 flex items-center justify-between">
+                <div>
+                  <p class="heading-font text-sm font-semibold text-slate-50">
+                    Raiyan · Canada
+                  </p>
+                  <p class="text-[11px] text-slate-400">
+                    Diploma to PR-friendly bachelor route
+                  </p>
+                </div>
+                <div class="text-gcbdOrange text-xs">★★★★★</div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-200">
+                “They didn&apos;t just chase offers—they designed a route that
+                fits my budget and long-term immigration goals.”
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section
+        id="faq"
+        class="bg-white py-14 sm:py-16 lg:py-20"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8" data-aos="fade-up">
+            <p
+              class="heading-font text-[11px] font-semibold uppercase tracking-[0.26em] text-gcbdMagenta mb-2"
+            >
+              FAQ
+            </p>
+            <h2
+              class="heading-font text-2xl sm:text-3xl font-semibold text-slate-900"
+            >
+              Questions students ask us the most.
+            </h2>
+          </div>
+
+          <div class="space-y-3" data-aos="fade-up" data-aos-delay="50">
+            <!-- Item -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60"
+            >
+              <button
+                type="button"
+                class="faq-toggle flex w-full items-center justify-between gap-4 px-4 py-3 text-left"
+              >
+                <span
+                  class="heading-font text-xs sm:text-sm font-semibold text-slate-900"
+                >
+                  How much does your service cost?
+                </span>
+                <span
+                  class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-slate-700 text-xs"
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden px-4 pb-0 text-[11px] sm:text-xs text-slate-600 transition-all duration-300"
+              >
+                <p class="pb-3">
+                  We offer different plans depending on your destination and
+                  services needed. Many students receive end-to-end guidance
+                  with little to no service fee because universities compensate
+                  us. You’ll always know upfront what’s paid and what’s free.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60"
+            >
+              <button
+                type="button"
+                class="faq-toggle flex w-full items-center justify-between gap-4 px-4 py-3 text-left"
+              >
+                <span
+                  class="heading-font text-xs sm:text-sm font-semibold text-slate-900"
+                >
+                  How long does the overall process take?
+                </span>
+                <span
+                  class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-slate-700 text-xs"
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden px-4 pb-0 text-[11px] sm:text-xs text-slate-600 transition-all duration-300"
+              >
+                <p class="pb-3">
+                  Depending on your target intake and destination, planning
+                  ideally starts 9–12 months before classes. With an organised
+                  profile and documents, we regularly help students secure
+                  admits and visas within 3–6 months.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60"
+            >
+              <button
+                type="button"
+                class="faq-toggle flex w-full items-center justify-between gap-4 px-4 py-3 text-left"
+              >
+                <span
+                  class="heading-font text-xs sm:text-sm font-semibold text-slate-900"
+                >
+                  Can I still apply if my CGPA or IELTS score is low?
+                </span>
+                <span
+                  class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-slate-700 text-xs"
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden px-4 pb-0 text-[11px] sm:text-xs text-slate-600 transition-all duration-300"
+              >
+                <p class="pb-3">
+                  Yes. We specialise in mapping realistic options based on your
+                  full profile, not just one score. Foundation courses,
+                  pathway programs, or alternative destinations can still lead
+                  to excellent outcomes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60"
+            >
+              <button
+                type="button"
+                class="faq-toggle flex w-full items-center justify-between gap-4 px-4 py-3 text-left"
+              >
+                <span
+                  class="heading-font text-xs sm:text-sm font-semibold text-slate-900"
+                >
+                  Do you help with accommodation and part-time work guidance?
+                </span>
+                <span
+                  class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-slate-700 text-xs"
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden px-4 pb-0 text-[11px] sm:text-xs text-slate-600 transition-all duration-300"
+              >
+                <p class="pb-3">
+                  Absolutely. Our pre-departure sessions cover housing,
+                  budgeting, part-time opportunities, and practical tips from
+                  GCBD alumni already living in your destination city.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60"
+            >
+              <button
+                type="button"
+                class="faq-toggle flex w-full items-center justify-between gap-4 px-4 py-3 text-left"
+              >
+                <span
+                  class="heading-font text-xs sm:text-sm font-semibold text-slate-900"
+                >
+                  How do parents stay updated during the process?
+                </span>
+                <span
+                  class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-slate-700 text-xs"
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden px-4 pb-0 text-[11px] sm:text-xs text-slate-600 transition-all duration-300"
+              >
+                <p class="pb-3">
+                  We maintain a clear update rhythm through WhatsApp groups
+                  and calls with both student and guardian, so every milestone
+                  and requirement is transparent.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="relative overflow-hidden bg-slate-900 text-slate-100 pt-10 pb-6"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-soft-light watermark-bg"
+      ></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid gap-8 border-b border-slate-800 pb-8 md:grid-cols-3"
+          data-aos="fade-up"
+        >
+          <!-- Col 1 -->
+          <div>
+            <div class="mb-3 flex items-center gap-2">
+              <img
+                src="./assets/logo2.png"
+                alt="GCBD Logo"
+                class="h-8 w-auto object-contain"
+              />
+            </div>
+            <p class="text-sm text-slate-200/90">
+              Global Connect Bangladesh (GCBD) is a specialised overseas
+              education partner helping Bangladeshi students access
+              high-quality, future-proof global programs.
+            </p>
+          </div>
+
+          <!-- Col 2 -->
+          <div>
+            <h3 class="heading-font text-sm font-semibold mb-3">
+              Office & Contact
+            </h3>
+            <p class="text-sm text-slate-200/90">
+              Ventura Iconia, Level 3, Plot 37, Road 11, Block H Banani,<br />Dhaka, Bangladesh
+            </p>
+            <p class="mt-2 text-sm text-slate-200/90">
+              Phone:
+              <span class="font-semibold">+880 1X XXX XXXX</span><br />
+              Email:
+              <a
+                href="mailto:info@globalconnectbd.org"
+                class="text-gcbdOrange hover:underline"
+                >info@globalconnectbd.org</a
+              >
+            </p>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="space-y-3">
+            <h3 class="heading-font text-sm font-semibold">Stay Connected</h3>
+            <a
+              href="https://www.facebook.com/globalconnectbd.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-3.5 py-1.5 text-xs text-slate-100 hover:bg-white/10 hover:shadow-lg hover:scale-[1.05] active:scale-100 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3.5 w-3.5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H7v4h3v8h3Z"
+                />
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <button
+              id="back-to-top"
+              type="button"
+              class="heading-font inline-flex items-center gap-1 rounded-full border border-slate-700 bg-white/5 px-3.5 py-1.5 text-xs text-slate-100 hover:bg-white/10 hover:shadow-lg hover:scale-[1.05] active:scale-100 transition"
+            >
+              <span>Back to Top</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3.5 w-3.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M12 19V5" />
+                <path d="m6 11 6-6 6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="mt-4 flex flex-col items-start justify-between gap-3 text-[11px] text-slate-500 sm:flex-row sm:items-center"
+        >
+          <p>
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Global Connect Bangladesh. All rights reserved.
+          </p>
+          <p>Built for students who refuse to settle.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE CONTACT BAR -->
+    <div
+      class="fixed inset-x-0 bottom-0 z-40 flex items-center justify-between gap-3 border-t border-slate-200 bg-white/95 px-4 py-2.5 shadow-[0_-10px_30px_rgba(15,23,42,0.07)] sm:hidden"
+    >
+      <div class="flex flex-col">
+        <span
+          class="heading-font text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700"
+          >Need help now?</span
+        >
+        <span class="text-[11px] text-slate-500"
+          >Talk to a GCBD mentor instantly.</span
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <a
+          href="https://calendly.com/gcbd-admissions/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="heading-font inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-3 py-1.5 text-[11px] font-semibold text-slate-800 hover:bg-slate-50 hover:shadow-md hover:scale-[1.03] active:scale-100 transition"
+        >
+          Book
+        </a>
+        <a
+          href="https://wa.me/8801000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="heading-font inline-flex items-center justify-center rounded-full bg-gcbdMagenta px-3.5 py-1.5 text-[11px] font-semibold text-white shadow-md hover:shadow-lg hover:scale-[1.05] active:scale-100 transition"
+        >
+          Contact Now
+        </a>
+      </div>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 60,
+        duration: 650,
+        easing: "ease-out-quart",
+      });
+
+      // Header scroll behavior
+      const header = document.getElementById("site-header");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const onScroll = () => {
+        const scrolled = window.scrollY > 40;
+        header.classList.toggle("pt-4", !scrolled);
+        header.classList.toggle("pt-2", scrolled);
+        header
+          .querySelector("div")
+          .classList.toggle("bg-white/5", !scrolled);
+        header
+          .querySelector("div")
+          .classList.toggle("bg-white/90", scrolled);
+        header
+          .querySelector("div")
+          .classList.toggle("border-white/20", !scrolled);
+        header
+          .querySelector("div")
+          .classList.toggle("border-slate-200/80", scrolled);
+        navLinks.forEach((link) => {
+          link.classList.toggle("text-slate-100/80", !scrolled);
+          link.classList.toggle("hover:text-white", !scrolled);
+          link.classList.toggle("text-slate-700", scrolled);
+          link.classList.toggle("hover:text-gcbdMagenta", scrolled);
+        });
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      mobileToggle?.addEventListener("click", () => {
+        const open = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", !open);
+        iconOpen.classList.toggle("hidden", open === false);
+        iconClose.classList.toggle("hidden", open === true);
+      });
+      mobileMenu?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+
+      // Stats counting animation
+      const stats = document.querySelectorAll("[data-target]");
+      let statsStarted = false;
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !statsStarted) {
+              statsStarted = true;
+              stats.forEach((el) => {
+                const target = parseInt(el.getAttribute("data-target"), 10);
+                let current = 0;
+                const duration = 1200;
+                const start = performance.now();
+                const step = (now) => {
+                  const progress = Math.min((now - start) / duration, 1);
+                  current = Math.floor(progress * target);
+                  el.textContent = current.toString();
+                  if (progress < 1) {
+                    requestAnimationFrame(step);
+                  } else {
+                    el.textContent = target.toString();
+                  }
+                };
+                requestAnimationFrame(step);
+              });
+              statsObserver.disconnect();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      stats.forEach((el) => statsObserver.observe(el));
+
+      // FAQ accordions
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const toggle = item.querySelector(".faq-toggle");
+        const content = item.querySelector(".faq-content");
+        const icon = toggle.querySelector("span:last-child");
+        toggle.addEventListener("click", () => {
+          const isOpen = content.style.maxHeight;
+          document.querySelectorAll(".faq-content").forEach((c) => {
+            c.style.maxHeight = null;
+          });
+          document
+            .querySelectorAll(".faq-toggle span:last-child")
+            .forEach((i) => (i.textContent = "+"));
+          if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.textContent = "−";
+          }
+        });
+      });
+
+      // Eligibility WhatsApp deep link
+      const whatsappBtn = document.getElementById("whatsapp-cta");
+      whatsappBtn?.addEventListener("click", () => {
+        const destination =
+          document.getElementById("el-destination").value || "Not specified";
+        const qualification =
+          document.getElementById("el-qualification").value ||
+          "Not specified";
+        const english =
+          document.getElementById("el-english").value || "Not specified";
+        const name =
+          document.getElementById("el-name").value.trim() || "Not provided";
+        const phone =
+          document.getElementById("el-phone").value.trim() || "Not provided";
+
+        const text = `Hi GCBD,%0A%0AI would like to check my eligibility for overseas study.%0A%0AName: ${encodeURIComponent(
+          name
+        )}%0AWhatsApp: ${encodeURIComponent(
+          phone
+        )}%0APreferred destination: ${encodeURIComponent(
+          destination
+        )}%0ALast qualification: ${encodeURIComponent(
+          qualification
+        )}%0AEnglish level: ${encodeURIComponent(
+          english
+        )}%0A%0APlease guide me with suitable options.`;
+
+        const url = `https://wa.me/8801000000000?text=${text}`;
+        window.open(url, "_blank");
+      });
+
+      // Back to top
+      document
+        .getElementById("back-to-top")
+        ?.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        );
+    </script>
+  </body>
+</html>
